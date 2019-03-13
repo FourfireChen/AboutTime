@@ -19,8 +19,8 @@ abstract class BaseActivity<T : ViewModel> (@LayoutRes private val layoutId: Int
         viewModel = viewModelClass?.let { ViewModelProvider.NewInstanceFactory().create(it) }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(layoutId)
 
         initData()

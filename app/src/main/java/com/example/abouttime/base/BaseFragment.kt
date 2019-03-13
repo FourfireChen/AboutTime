@@ -12,10 +12,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.abouttime.R
 
-abstract class BaseFragment<T : ViewModel> (@LayoutRes private val layoutId: Int, viewModelClass : Class<T>?): Fragment() {
-    constructor(@LayoutRes layoutId: Int) : this(layoutId,null)
+abstract class BaseFragment<T : ViewModel>(@LayoutRes private val layoutId: Int, viewModelClass: Class<T>?) : Fragment() {
+    constructor(@LayoutRes layoutId: Int) : this(layoutId, null)
 
-    protected var viewModel : T? = null
+    protected var viewModel: T? = null
 
     init {
         viewModel = viewModelClass?.let { ViewModelProvider.NewInstanceFactory().create(it) }
@@ -43,4 +43,6 @@ abstract class BaseFragment<T : ViewModel> (@LayoutRes private val layoutId: Int
         intent.putExtra(getString(R.string.DATA), data)
         startActivity(intent)
     }
+
+    open fun getTitle(): String? = null
 }
