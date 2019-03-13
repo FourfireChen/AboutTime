@@ -3,7 +3,11 @@ package com.example.abouttime.me
 import com.example.abouttime.R
 import com.example.abouttime.base.BaseFragment
 
-class MeFragment : BaseFragment<MeViewModel>(R.layout.me_fra, MeViewModel::class.java) {
+class MeFragment : BaseFragment<MeViewModel>(R.layout.me_fra,
+        MeViewModel::class.java,
+        "我的",
+        R.drawable.ic_person_white_36dp) {
+
     override fun initData() {
 
     }
@@ -14,5 +18,4 @@ class MeFragment : BaseFragment<MeViewModel>(R.layout.me_fra, MeViewModel::class
     override fun initContract() {
     }
 
-    override fun getTitle(): String? = "我的"
 }

@@ -6,10 +6,14 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.ViewModel
 import com.example.abouttime.base.BaseFragment
 
-class MainPagerAdapter(fragmentManager: FragmentManager, private val fragments: List<BaseFragment<out ViewModel>>) : FragmentPagerAdapter(fragmentManager) {
+class MainPagerAdapter(fragmentManager: FragmentManager,
+                       private val fragments: List<BaseFragment<out ViewModel>>) :
+        FragmentPagerAdapter(fragmentManager) {
     override fun getCount(): Int = fragments.size
 
     override fun getItem(position: Int): Fragment = fragments[position]
 
-    override fun getPageTitle(position: Int): CharSequence? = fragments[position].getTitle()
+    override fun getPageTitle(position: Int): CharSequence? = fragments[position].title
+
+
 }
