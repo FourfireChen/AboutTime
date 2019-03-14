@@ -5,7 +5,7 @@ import android.widget.TextView
 import com.example.abouttime.R
 import com.example.abouttime.base.BaseAdapter
 import com.example.abouttime.base.BaseViewHolder
-import com.example.abouttime.me.Memory
+import com.example.abouttime.bean.Memory
 
 class MemoryListAdapter(data: List<Memory>?) : BaseAdapter<Memory>(data,
         R.layout.memory_list_item) {

@@ -5,12 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.abouttime.R
 
-abstract class BaseActivity<T : ViewModel>(@LayoutRes
-                                           private val layoutId: Int, private val viewModelClass: Class<T>?) :
+abstract class BaseActivity<T : BaseViewModel>(@LayoutRes
+                                               private val layoutId: Int, private val viewModelClass: Class<T>?) :
         AppCompatActivity() {
     protected var viewModel: T? = null
 
@@ -31,11 +30,11 @@ abstract class BaseActivity<T : ViewModel>(@LayoutRes
         initContract()
     }
 
-    abstract fun initContract()
-
     abstract fun initView()
 
-    protected fun initData() {}
+    abstract fun initContract()
+
+    protected open fun initData() {}
 
     fun startActivity(activity: Class<Activity>, data: Bundle? = null) {
         val intent = Intent(this, activity)

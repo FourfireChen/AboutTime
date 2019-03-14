@@ -1,6 +1,5 @@
 package com.example.abouttime.base
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,14 +8,13 @@ import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.abouttime.R
 
-abstract class BaseFragment<T : ViewModel>(@LayoutRes
-                                           val layoutId: Int, viewModelClass: Class<T>? = null,
-                                           val title: String? = null,
-                                           @DrawableRes val icon: Int = 0) : Fragment() {
+abstract class BaseFragment<T : BaseViewModel>(@LayoutRes
+                                               val layoutId: Int, viewModelClass: Class<T>? = null,
+                                               val title: String? = null,
+                                               @DrawableRes val icon: Int = 0) : Fragment() {
 
     protected var viewModel: T? = null
 
@@ -29,8 +27,6 @@ abstract class BaseFragment<T : ViewModel>(@LayoutRes
                               savedInstanceState: Bundle?): View? {
 
         initData()
-
-
 
         return inflater.inflate(layoutId, container, false)
     }
@@ -49,7 +45,7 @@ abstract class BaseFragment<T : ViewModel>(@LayoutRes
 
     abstract fun initContract()
 
-    fun startActivity(actvitiy: Class<Activity>, data: Bundle? = null) {
+    fun startActivity(actvitiy: Class<BaseActivity<BaseViewModel>>, data: Bundle? = null) {
         val intent = Intent(context, actvitiy)
         intent.putExtra(getString(R.string.data), data)
         startActivity(intent)

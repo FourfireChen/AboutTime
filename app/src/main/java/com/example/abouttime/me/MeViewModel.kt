@@ -1,7 +1,7 @@
 package com.example.abouttime.me
 
-import androidx.lifecycle.ViewModel
+import com.example.abouttime.base.BaseViewModel
 
-class MeViewModel : ViewModel() {
+class MeViewModel : BaseViewModel() {
 
 }

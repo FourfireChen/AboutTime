@@ -1,7 +1,7 @@
 package com.example.abouttime.memory
 
-import androidx.lifecycle.ViewModel
+import com.example.abouttime.base.BaseViewModel
 
-class MemoryViewModel : ViewModel() {
+class MemoryViewModel : BaseViewModel() {
 
 }
