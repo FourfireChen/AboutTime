@@ -14,7 +14,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:tint="@color/colorPrimary" />
+            android:tint="@color/colorAccentLight" />
 
         <TextView
             android:id="@+id/tab_text"

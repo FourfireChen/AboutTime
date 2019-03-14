@@ -5,9 +5,10 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.ViewModel
 import com.example.abouttime.base.BaseFragment
+import com.example.abouttime.base.BaseViewModel
 
 class MainPagerAdapter(fragmentManager: FragmentManager,
-                       private val fragments: List<BaseFragment<out ViewModel>>) :
+                       private val fragments: List<BaseFragment<out BaseViewModel>>) :
         FragmentPagerAdapter(fragmentManager) {
     override fun getCount(): Int = fragments.size
 
