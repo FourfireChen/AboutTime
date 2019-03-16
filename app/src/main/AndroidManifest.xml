@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".add.AddActivity" />
+        <activity android:name=".memory_detail.DetailActivity" />
     </application>
 
 </manifest>

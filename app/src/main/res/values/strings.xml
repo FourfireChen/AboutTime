@@ -2,4 +2,6 @@
     <string name="app_name">AboutTime</string>
     <string name="data">data</string>
     <string name="newMemory">newMemory</string>
+    <string name="isCreating">isCreating</string>
+    <string name="memory">memory</string>
 </resources>

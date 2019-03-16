@@ -8,7 +8,7 @@ import com.example.abouttime.bean.Memory
 class AddViewModel : BaseViewModel() {
 
 
-    fun addMemory(title : String, remark: String, time: String) : LiveData<Memory>{
+    fun addMemory(title: String, remark: String, time: String): LiveData<Memory> {
         return MutableLiveData<Memory>()
     }
 }

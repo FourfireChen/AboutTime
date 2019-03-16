@@ -3,7 +3,6 @@ package com.example.abouttime
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.lifecycle.ViewModel
 import com.example.abouttime.base.BaseFragment
 import com.example.abouttime.base.BaseViewModel
 

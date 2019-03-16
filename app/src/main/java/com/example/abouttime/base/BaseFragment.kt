@@ -39,13 +39,15 @@ abstract class BaseFragment<T : BaseViewModel>(@LayoutRes
         initContract()
     }
 
-    abstract fun initData()
+    open protected fun initData() {
+
+    }
 
     abstract fun initView()
 
     abstract fun initContract()
 
-    fun startActivity(actvitiy: Class<BaseActivity<BaseViewModel>>, data: Bundle? = null) {
+    fun startActivity(actvitiy: Class<*>, data: Bundle? = null) {
         val intent = Intent(context, actvitiy)
         intent.putExtra(getString(R.string.data), data)
         startActivity(intent)
