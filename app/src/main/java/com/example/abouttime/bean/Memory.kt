@@ -5,9 +5,9 @@ import android.os.Parcelable
 
 data class Memory(var name: String, var time: String = "", var remark: String = "") : Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString()) {
+            parcel.readString()!!,
+            parcel.readString()!!,
+            parcel.readString()!!) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

@@ -17,8 +17,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/detail_title_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="30dp"
+        android:maxLength="10"
+        android:maxWidth="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/detail_days"
+        app:layout_constraintEnd_toStartOf="@+id/detail_title_editingflag"
+        app:layout_constraintStart_toStartOf="@+id/detail_title_edit"
+        app:layout_constraintTop_toTopOf="@+id/detail_title_edit" />
+
     <EditText
-        android:id="@+id/detail_title"
+        android:id="@+id/detail_title_edit"
+        android:visibility="invisible"
+        android:maxLength="10"
+        android:maxWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,16 +45,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <ImageView
+    <com.example.view.ShakingImageView
         android:id="@+id/detail_title_editingflag"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_edit_white_36dp"
-        android:tint="@color/grey"
         app:layout_constraintBottom_toTopOf="@+id/detail_days"
-        app:layout_constraintStart_toEndOf="@+id/detail_title"
+        app:layout_constraintStart_toEndOf="@+id/detail_title_edit"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
@@ -51,7 +66,7 @@
         android:textSize="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_title" />
+        app:layout_constraintTop_toBottomOf="@+id/detail_title_edit" />
 
     <TextView
         android:id="@+id/detail_time"
@@ -65,7 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_days" />
 
-    <ImageView
+    <com.example.view.ShakingImageView
         android:id="@+id/detail_time_editingflag"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -73,18 +88,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_edit_white_36dp"
-        android:tint="@color/grey"
         app:layout_constraintBottom_toBottomOf="@+id/detail_time"
         app:layout_constraintStart_toEndOf="@+id/detail_time"
         app:layout_constraintTop_toTopOf="@+id/detail_time" />
 
-    <ImageView
+    <com.example.view.ShakingImageView
         android:id="@+id/detail_remark_editingflag"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:src="@drawable/ic_edit_white_36dp"
-        android:tint="@color/grey"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
@@ -102,8 +115,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_time" />
 
+    <TextView
+        android:id="@+id/detail_remark_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
+        android:maxLines="4"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_remark_edit"
+        app:layout_constraintEnd_toEndOf="@+id/detail_remark_edit"
+        app:layout_constraintStart_toStartOf="@+id/detail_remark_edit"
+        app:layout_constraintTop_toTopOf="@+id/detail_remark_edit" />
+
     <EditText
-        android:id="@+id/detail_remark"
+        android:id="@+id/detail_remark_edit"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
